@@ -10,3 +10,39 @@ body {
   width: 100%;
   margin: 0 auto;
 }
+
+/* loader */
+
+.loading{
+  margin: 6rem auto;
+}
+
+.ring {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  padding: 20px;
+  animation: ani 2s linear infinite;
+}
+.loading-text {
+  border-radius: 50%;
+  color: rgb(0, 0, 0);
+  position: absolute;
+  font-size: 2em;
+  background: transparent;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+}
+@keyframes ani {
+  0% {
+    transform: rotate(0deg);
+    box-shadow: 1px 5px 2px #ff002e;
+  }
+  50% {
+    transform: rotate(180deg);
+    box-shadow: 1px 5px 2px #18a401;
+  }
+  100% {
+    transform: rotate(360deg);
+    box-shadow: 1px 5px 2px #033e8e;
+  }
+}
