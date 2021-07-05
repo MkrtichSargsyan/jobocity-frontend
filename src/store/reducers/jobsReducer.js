@@ -2,7 +2,7 @@ import * as types from '../types';
 
 
 const initialState = {
-    jobs:['d'],
+    jobs:[],
     loading: false,
     error: null,
 };

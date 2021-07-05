@@ -1,23 +1,29 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { fetchJobs } from "../store/actions";
-import Loader from '../components/loader'
-import SearchBar from '../components/searchBar'
 import api from "../api";
+import Loader from "../components/loader";
+import SearchBar from "../components/searchBar";
+import Sidebar from "../components/sidebar";
+import JobList from "../components/jobsList";
 
 export class MainPage extends Component {
   async componentDidMount() {
     await this.props.fetchJobs(api);
-    console.log(this.props.jobs);
-    console.log(this.props.loading);
   }
 
   render() {
+    const { jobs } = this.props;
+
     return (
       <>
-         <SearchBar/>
+        <SearchBar />
+        <div className="flex flex-col md:flex-row">
+          <Sidebar />
+          {jobs.length ? <JobList jobs={jobs} /> : <Loader />}
+        </div>
       </>
-    )
+    );
   }
 }
 
