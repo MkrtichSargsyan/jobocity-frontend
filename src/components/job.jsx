@@ -1,7 +1,8 @@
 import React from "react";
 
 function Job({ handleClick, job }) {
-  const { description, location, company, technologies, logo, position, date } = job
+  const { description, location, company, technologies, logo, position, date } =
+    job;
 
   return (
     <div
@@ -10,7 +11,7 @@ function Job({ handleClick, job }) {
        hover:bg-gray-300 shadow-2xl"
     >
       <div className="w-2/12 mr-4">
-        <img src={logo} alt="logo" className="rounded" />
+        <img src={logo} alt="logo" className="rounded h-24" />
       </div>
       <div className="flex flex-col text-blue-800  w-full">
         <p className="font-roboto text-xs font-bold">{company}</p>
