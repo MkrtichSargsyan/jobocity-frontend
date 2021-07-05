@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { fetchJobs } from "../store/actions";
 import Loader from '../components/loader'
+import SearchBar from '../components/searchBar'
 import api from "../api";
 
 export class MainPage extends Component {
@@ -12,7 +13,11 @@ export class MainPage extends Component {
   }
 
   render() {
-    return <div>{this.props.loading ? <Loader/> : "false"}</div>;
+    return (
+      <>
+         <SearchBar/>
+      </>
+    )
   }
 }
 
