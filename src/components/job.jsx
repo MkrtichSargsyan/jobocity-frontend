@@ -1,10 +1,11 @@
 import React from "react";
 
-function Job({ description, location, company, technologies, logo, position, date }) {
+function Job({ handleClick, job }) {
+  const { description, location, company, technologies, logo, position, date } = job
 
   return (
     <div
-      // onClick={handleClick}
+      onClick={handleClick}
       className="flex p-4 mb-4 rounded bg-white cursor-pointer
        hover:bg-gray-300 shadow-2xl"
     >

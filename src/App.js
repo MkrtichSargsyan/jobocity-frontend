@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Switch, Route } from "react-router-dom";
 import MainPage from './pages/main.page'
+import DescriptionPage from './pages/description.page'
 import Logo from './components/logo'
 
 
@@ -11,7 +12,7 @@ export class App extends Component {
         <Logo/>
          <Switch>
           <Route exact path="/" component={MainPage}/>
-          {/* <Route exact path="/description/:id" component={Description} /> */}
+          <Route exact path="/description/:id" component={DescriptionPage} />
           {/* <Route component={notFound} /> */}
         </Switch>
       </div>
