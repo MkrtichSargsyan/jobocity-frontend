@@ -19,7 +19,7 @@ export class MainPage extends Component {
       <>
         <SearchBar />
         <div className="flex flex-col md:flex-row">
-          <Sidebar />
+          <Sidebar page="mainPage"/>
           {jobs.length ? <JobList jobs={jobs} /> : <Loader />}
         </div>
       </>

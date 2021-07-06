@@ -5,7 +5,6 @@ import axios from "axios";
 export const fetchJobs = (url) => {
   return async (dispatch) => {
     
-    // setTimeout(()=>dispatch(fetchJobsStart()), 3000)
     dispatch(fetchJobsStart());
 
     try {

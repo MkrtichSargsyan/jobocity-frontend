@@ -1,8 +1,7 @@
 import React from "react";
 
 function Job({ handleClick, job }) {
-  const { description, location, company, technologies, logo, position, date } =
-    job;
+  const { location, company, logo, position, date } = job;
 
   return (
     <div
