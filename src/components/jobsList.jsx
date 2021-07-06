@@ -4,7 +4,6 @@ import Job from "../components/job";
 
 class jobsList extends Component {
   handleClick = (job) => {
-    console.log("job", job);
     this.props.history.push(`description/${job.id}`, job);
   };
 
