@@ -1,12 +1,12 @@
 import React from 'react'
+import JobDescription from '../components/jobDescription'
 import Sidebar from "../components/sidebar";
 
 function DescriptionPage({history}) {
-  console.log(history);
   return (
     <div className="md:flex">
       <Sidebar page="descriptionPage" />
-      {/* <JobDescription data={data} /> */}
+      <JobDescription data={history.location.state} />
     </div>
   );
 }
