@@ -54,3 +54,28 @@ body {
 .logo{
   width: 150px;
 }
+
+/* modal */
+
+.modal {
+  position: fixed;
+  z-index: 1102;
+  background-color: #123456;
+  color: white;
+  width: 30%;
+  border:1px solid #ccc;
+  box-shadow: 2px 2px 2px black;
+  padding: 16px;
+  left: 35%;
+  top: 15%;
+  box-sizing:  border-box;
+  animation-name: modalFade;
+  animation-duration: .9s;
+  border-radius: 10px;
+}
+
+
+@keyframes modalFade {
+  from {transform: translateY(-50%);opacity: 0;}
+  to {transform: translateY(0);opacity: 1;}
+}

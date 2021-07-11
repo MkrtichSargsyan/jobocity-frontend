@@ -14,7 +14,6 @@ export class App extends Component {
           <Switch>
             <Route exact path="/" component={MainPage} />
             <Route exact path="/description/:id" component={DescriptionPage} />
-            {/* <Route component={notFound} /> */}
           </Switch>
         </div>
         <Footer />
