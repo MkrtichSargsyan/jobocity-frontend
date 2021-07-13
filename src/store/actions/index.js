@@ -39,9 +39,10 @@ const fetchJobsError = (e) => {
 
 // modal actions
 
-export const openModal = () => {
+export const openModal = (modalType) => {
   return {
       type: types.OPEN_MODAL,
+      payload:modalType
   }
 };
 
@@ -50,3 +51,12 @@ export const closeModal = () => {
       type: types.CLOSE_MODAL,
   }
 };
+
+// choose job
+
+export const chooseJob = (choosedJob) =>{
+  return {
+    type: types.CHOOSE_JOB,
+    choosedJob
+  }
+}

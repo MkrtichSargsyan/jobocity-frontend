@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { fetchJobs } from "../store/actions";
+import { fetchJobs, chooseJob } from "../store/actions";
 import api from "../api";
 import Loader from "../components/loader";
 import SearchBar from "../components/searchBar";
@@ -20,7 +20,7 @@ export class MainPage extends Component {
         <SearchBar />
         <div className="flex flex-col md:flex-row">
           <Sidebar page="mainPage"/>
-          {jobs.length ? <JobList jobs={jobs} /> : <Loader />}
+          {jobs.length ? <JobList jobs={jobs} chooseJob={this.props.chooseJob}/> : <Loader />}
         </div>
       </>
     );
@@ -36,4 +36,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, { fetchJobs })(MainPage);
+export default connect(mapStateToProps, { fetchJobs, chooseJob })(MainPage);

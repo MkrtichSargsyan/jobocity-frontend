@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { IoReturnDownBackOutline } from 'react-icons/all';
 
-import ApplyModal from '../components/applyModal/applyModal';
+import ApplyModal from './modals/applyModal';
 
 import { openModal, closeModal } from '../store/actions/';
 
@@ -23,7 +23,7 @@ function Sidebar({ data, page, openModal, closeModal, isOpen }) {
           </div>
 
           <button
-            onClick={openModal}
+            onClick={()=>openModal('isOpen')}
             className="mx-auto px-6 py-3 text-white bg-blue-600 rounded-md font-bold"
           >
             Apply to This Position
@@ -65,6 +65,7 @@ function Sidebar({ data, page, openModal, closeModal, isOpen }) {
 }
 
 const mapStateToProps = (state) => {
+  console.log(state.modalReducer);
   return {
     isOpen: state.modalReducer.isOpen,
   };

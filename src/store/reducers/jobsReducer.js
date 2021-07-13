@@ -5,6 +5,7 @@ const initialState = {
     jobs:[],
     loading: false,
     error: null,
+    choosedJob: null,
 };
 
 export const jobsReducer = (state = initialState, action) => {
@@ -26,6 +27,11 @@ export const jobsReducer = (state = initialState, action) => {
               ...state,
               loading: false,
               error: action.error
+          };
+      case types.CHOOSE_JOB:
+          return {
+            ...state,
+            choosedJob: action.choosedJob
           };
       default :
           return state;

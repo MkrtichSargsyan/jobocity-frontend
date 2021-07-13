@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-import { Switch, Route } from "react-router-dom";
-import MainPage from "./pages/main.page";
-import DescriptionPage from "./pages/description.page";
-import Header from "./components/header";
-import Footer from "./components/footer";
+import React, { Component } from 'react';
+import { Switch, Route } from 'react-router-dom';
+import MainPage from './pages/main.page';
+import DescriptionPage from './pages/description.page';
+import Header from './components/header';
+import Footer from './components/footer';
 
 export class App extends Component {
   render() {

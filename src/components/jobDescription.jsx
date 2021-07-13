@@ -1,5 +1,5 @@
-import React from "react";
-import { AiOutlineClockCircle, BiWorld } from "react-icons/all";
+import React from 'react';
+import { AiOutlineClockCircle, BiWorld } from 'react-icons/all';
 
 function JobDescription({ data }) {
   const {
@@ -13,7 +13,7 @@ function JobDescription({ data }) {
     logo,
   } = data;
   return (
-    <div className="flex-1 md:ml-8 bg-white p-6 rounded -mt-28">
+    <div className="flex-1 md:ml-8 bg-white p-6 rounded">
       <div className="flex justify-between items-end md:items-center flex-col md:flex">
         <h1 className="text-indigo-900 md:mr-4 text-md md:text-2xl md:mb-4 font-bold">
           {position}
@@ -39,14 +39,14 @@ function JobDescription({ data }) {
           </div>
         </div>
       </div>
-      <h2 className={"mb-4 font-bold"}>Company description</h2>
-      <div className={"mb-12"}>{company_description}</div>
-      <h2 className={"mb-4 font-bold"}>Job description</h2>
-      <div className={"mb-12"}>{description}</div>
-      <h2 className={"mb-4 font-bold"}>Qualifications</h2>
+      <h2 className={'mb-4 font-bold'}>Company description</h2>
+      <div className={'mb-12'}>{company_description}</div>
+      <h2 className={'mb-4 font-bold'}>Job description</h2>
+      <div className={'mb-12'}>{description}</div>
+      <h2 className={'mb-4 font-bold'}>Qualifications</h2>
       <h3>Required Skills :</h3>
       <div>
-        {qualifications.map((el,i) => (
+        {qualifications.map((el, i) => (
           <p key={i}> - {el} </p>
         ))}
       </div>
