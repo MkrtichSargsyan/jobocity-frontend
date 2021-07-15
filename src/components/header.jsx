@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import LoginModal from './modals/loginModal';
 import RegisterModal from './modals/registerModal';
 
-import { openModal, closeModal, saveToken, saveUser } from '../store/actions/';
+import { openModal, closeModal, saveToken, saveUser, } from '../store/actions/';
 
 const Header = ({
   openModal,
@@ -13,7 +13,7 @@ const Header = ({
   saveUser,
   registerIsOpen,
   loginIsOpen,
-  user,
+  username
 }) => (
   <>
     {loginIsOpen && <LoginModal closeModal={closeModal} />}
@@ -24,14 +24,14 @@ const Header = ({
         saveUser={saveUser}
       />
     )}
-    <div className="cursor-pointer flex">
+    <div className="flex">
       <img src={logo} alt="Logo" className="logo" />
-      {user ? (
+      {username ? (
         <div className="flex-auto items-center justify-end flex">
-          {user.username}
+          {username}
           <button
             // onClick={() => openModal('registerIsOpen')}
-            className="ml-6 rounded bg-gray-100 hover:bg-gray-200 px-3 py-1 border transform duration-500 hover:scale-125"
+            className="ml-6 cursor-pointer rounded bg-gray-100 hover:bg-gray-200 px-3 py-1 border transform duration-500 hover:scale-125"
           >
             Sign Out
           </button>
@@ -47,7 +47,6 @@ const mapStateToProps = (state) => {
   return {
     loginIsOpen: state.modalReducer.loginIsOpen,
     registerIsOpen: state.modalReducer.registerIsOpen,
-    user: state.authReducer.user,
   };
 };
 

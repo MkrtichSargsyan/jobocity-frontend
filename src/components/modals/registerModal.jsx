@@ -17,7 +17,7 @@ class registerModal extends Component {
   }
 
   async handleSubmit(event) {
-    const { saveToken, saveUser } = this.props;
+    const { saveToken } = this.props;
     event.preventDefault();
 
     let data = {
@@ -41,8 +41,8 @@ class registerModal extends Component {
         const authPromise = await axios(config);
         const authData = authPromise.data;
         saveToken(authData.token);
-        saveUser(authData.user);
-        console.log(authData);
+        window.localStorage.setItem('token', authData.token)
+        this.props.closeModal()
       } catch (error) {
         console.log(error);
       }
