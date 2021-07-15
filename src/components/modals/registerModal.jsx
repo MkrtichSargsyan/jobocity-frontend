@@ -50,7 +50,7 @@ class registerModal extends Component {
 
         this.props.closeModal()
       } catch (error) {
-        console.log(error);
+        this.setState({error:error})
       }
     } else {
       this.setState({ error: true });
@@ -66,6 +66,7 @@ class registerModal extends Component {
           className={'modal shadow-md'}
           onSubmit={(e) => this.handleSubmit(e)}
         >
+          {this.state.error && <div className='text-red-600'>Invalid data</div>}
           <div className="pt-6 flex flex-col">
             <div className="mb-4">
               <label
