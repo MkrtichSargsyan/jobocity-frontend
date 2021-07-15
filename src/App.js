@@ -10,16 +10,19 @@ import { connect } from 'react-redux';
 import { saveUser } from './store/actions';
 
 export class App extends Component {
-  componentDidMount() {
-    let jwt = window.localStorage.getItem('token');
-    let result = jwtDecode(jwt);
-    this.props.saveUser(result);
+
+
+   componentDidMount() {
+    if (window.localStorage.getItem('token')) {
+      let jwt = window.localStorage.getItem('token');
+      let result = jwtDecode(jwt);
+      this.props.saveUser(result);
+    }
   }
 
   render() {
     const { user } = this.props;
     const username = user ? user.username : '';
-    console.log(username);
     return (
       <div>
         <div className="md:px-24 px-4">

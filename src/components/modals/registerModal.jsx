@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import jwtDecode from 'jwt-decode';
 import { Backdrop } from './backDrop';
 
 class registerModal extends Component {
@@ -17,8 +18,9 @@ class registerModal extends Component {
   }
 
   async handleSubmit(event) {
-    const { saveToken } = this.props;
     event.preventDefault();
+
+    const { saveToken, saveUser } = this.props;
 
     let data = {
       username: `${this.state.username}`,
@@ -40,8 +42,12 @@ class registerModal extends Component {
       try {
         const authPromise = await axios(config);
         const authData = authPromise.data;
-        saveToken(authData.token);
         window.localStorage.setItem('token', authData.token)
+        saveToken(authData.token);
+
+        let result = jwtDecode(authData.token);
+        saveUser(result);
+
         this.props.closeModal()
       } catch (error) {
         console.log(error);

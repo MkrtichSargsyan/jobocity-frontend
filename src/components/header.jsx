@@ -6,6 +6,11 @@ import RegisterModal from './modals/registerModal';
 
 import { openModal, closeModal, saveToken, saveUser, } from '../store/actions/';
 
+const signOut = (saveUser)=>{
+  localStorage.removeItem("token");
+  saveUser(null)
+}
+
 const Header = ({
   openModal,
   closeModal,
@@ -30,7 +35,7 @@ const Header = ({
         <div className="flex-auto items-center justify-end flex">
           {username}
           <button
-            // onClick={() => openModal('registerIsOpen')}
+            onClick={()=>signOut(saveUser)}
             className="ml-6 cursor-pointer rounded bg-gray-100 hover:bg-gray-200 px-3 py-1 border transform duration-500 hover:scale-125"
           >
             Sign Out
