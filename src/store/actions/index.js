@@ -60,3 +60,21 @@ export const chooseJob = (choosedJob) =>{
     choosedJob
   }
 }
+
+// save user
+
+export const saveUser = (user) =>{
+  return {
+    type: types.SAVE_USER,
+    user
+  }
+}
+
+// save token
+
+export const saveToken = (token) =>{
+  return {
+    type: types.SAVE_TOKEN,
+    token
+  }
+}

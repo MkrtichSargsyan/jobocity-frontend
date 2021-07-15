@@ -65,7 +65,6 @@ function Sidebar({ data, page, openModal, closeModal, isOpen }) {
 }
 
 const mapStateToProps = (state) => {
-  console.log(state.modalReducer);
   return {
     isOpen: state.modalReducer.isOpen,
   };
