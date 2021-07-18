@@ -11,7 +11,7 @@ function Sidebar({ data, page, openModal, closeModal, isOpen }) {
   return (
     <>
       {isOpen && (
-        <ApplyModal company_name={data.company} closeModal={closeModal}/>
+        <ApplyModal company_name={data.company} closeModal={closeModal} openModal={openModal}/>
       )}
       {page === 'descriptionPage' && (
         <aside className="md:w-1/3 mb-4 flex flex-col md:block justify-center">

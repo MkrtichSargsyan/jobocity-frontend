@@ -71,6 +71,18 @@ body {
   border-radius: 10px;
 }
 
+.flash {
+  position: fixed;
+  z-index: 1102;
+  width: 30%;
+  padding: 16px;
+  left: 35%;
+  top: 5%;
+  animation-name: modalFade;
+  animation-duration: .9s;
+  border-radius: 10px;
+}
+
 
 @keyframes modalFade {
   from {transform: translateY(-50%);opacity: 0;}

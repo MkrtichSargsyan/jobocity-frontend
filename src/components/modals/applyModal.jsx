@@ -5,7 +5,7 @@ import '../../custom.css';
 
 import { Backdrop } from './backDrop';
 
-const applyForTheJob = async (closeModal,user, job) => {
+const applyForTheJob = async (closeModal,openModal,user, job) => {
   const token = localStorage.getItem('token');
   console.log(user.user_id);
   if (token && token !== 'undefined') {
@@ -30,9 +30,10 @@ const applyForTheJob = async (closeModal,user, job) => {
     }
   }
   closeModal()
+  openModal('flashIsOpen')
 };
 
-function ApplyModal({ company_name, closeModal, user, job }) {
+function ApplyModal({ company_name, closeModal, user, job, openModal }) {
   return (
     <>
       <Backdrop />
@@ -44,7 +45,7 @@ function ApplyModal({ company_name, closeModal, user, job }) {
           <p>Are you sure you want to apply for {company_name}</p>
           <div className="flex justify-end mt-8">
             <button
-              onClick={() => applyForTheJob(closeModal,user, job)}
+              onClick={() => applyForTheJob(closeModal,openModal, user, job)}
               className="bg-blue-600 w-16 px-2 rounded-lg"
             >
               Yes

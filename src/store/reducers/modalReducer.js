@@ -4,6 +4,7 @@ const initialState = {
   isOpen: false,
   loginIsOpen: false,
   registerIsOpen: false,
+  flashIsOpen: false,
 };
 
 export const modalReducer = (state = initialState, action) => {
@@ -18,7 +19,8 @@ export const modalReducer = (state = initialState, action) => {
           ...state, 
           isOpen: false,
           loginIsOpen:false,
-          registerIsOpen:false
+          registerIsOpen:false,
+          flashIsOpen:false,
         };
     default:
       return { ...state };

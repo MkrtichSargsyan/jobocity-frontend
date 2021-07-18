@@ -3,6 +3,7 @@ import Login from './login';
 import { connect } from 'react-redux';
 import LoginModal from './modals/loginModal';
 import RegisterModal from './modals/registerModal';
+import Flash from './flash'
 
 import { openModal, closeModal, saveToken, saveUser } from '../store/actions/';
 
@@ -18,9 +19,11 @@ const Header = ({
   saveUser,
   registerIsOpen,
   loginIsOpen,
+  flashIsOpen,
   username,
 }) => (
   <>
+  {flashIsOpen && <Flash closeModal={closeModal}/>}
     {loginIsOpen && (
       <LoginModal
         closeModal={closeModal}
@@ -58,6 +61,7 @@ const mapStateToProps = (state) => {
   return {
     loginIsOpen: state.modalReducer.loginIsOpen,
     registerIsOpen: state.modalReducer.registerIsOpen,
+    flashIsOpen:state.modalReducer.flashIsOpen
   };
 };
 
