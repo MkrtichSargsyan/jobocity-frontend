@@ -10,10 +10,9 @@ import { connect } from 'react-redux';
 import { saveUser } from './store/actions';
 
 export class App extends Component {
-
-
-   componentDidMount() {
-    if (window.localStorage.getItem('token')) {
+  componentDidMount() {
+    const token = localStorage.getItem('token');
+    if (token && token !== 'undefined') {
       let jwt = window.localStorage.getItem('token');
       let result = jwtDecode(jwt);
       this.props.saveUser(result);

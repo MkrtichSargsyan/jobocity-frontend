@@ -4,12 +4,12 @@ import { connect } from 'react-redux';
 import LoginModal from './modals/loginModal';
 import RegisterModal from './modals/registerModal';
 
-import { openModal, closeModal, saveToken, saveUser, } from '../store/actions/';
+import { openModal, closeModal, saveToken, saveUser } from '../store/actions/';
 
-const signOut = (saveUser)=>{
-  localStorage.removeItem("token");
-  saveUser(null)
-}
+const signOut = (saveUser) => {
+  localStorage.removeItem('token');
+  saveUser(null);
+};
 
 const Header = ({
   openModal,
@@ -18,10 +18,16 @@ const Header = ({
   saveUser,
   registerIsOpen,
   loginIsOpen,
-  username
+  username,
 }) => (
   <>
-    {loginIsOpen && <LoginModal closeModal={closeModal} />}
+    {loginIsOpen && (
+      <LoginModal
+        closeModal={closeModal}
+        saveToken={saveToken}
+        saveUser={saveUser}
+      />
+    )}
     {registerIsOpen && (
       <RegisterModal
         closeModal={closeModal}
@@ -35,7 +41,7 @@ const Header = ({
         <div className="flex-auto items-center justify-end flex">
           {username}
           <button
-            onClick={()=>signOut(saveUser)}
+            onClick={() => signOut(saveUser)}
             className="ml-6 cursor-pointer rounded bg-gray-100 hover:bg-gray-200 px-3 py-1 border transform duration-500 hover:scale-125"
           >
             Sign Out

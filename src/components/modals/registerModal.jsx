@@ -42,15 +42,16 @@ class registerModal extends Component {
       try {
         const authPromise = await axios(config);
         const authData = authPromise.data;
-        window.localStorage.setItem('token', authData.token)
+        console.log(authData.token);
+        window.localStorage.setItem('token', authData.token);
         saveToken(authData.token);
 
         let result = jwtDecode(authData.token);
         saveUser(result);
 
-        this.props.closeModal()
+        this.props.closeModal();
       } catch (error) {
-        this.setState({error:error})
+        this.setState({ error: error });
       }
     } else {
       this.setState({ error: true });
@@ -66,7 +67,7 @@ class registerModal extends Component {
           className={'modal shadow-md'}
           onSubmit={(e) => this.handleSubmit(e)}
         >
-          {this.state.error && <div className='text-red-600'>Invalid data</div>}
+          {this.state.error && <div className="text-red-600">Invalid data</div>}
           <div className="pt-6 flex flex-col">
             <div className="mb-4">
               <label
