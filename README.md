@@ -3,8 +3,9 @@
 This is a fully responsive web application where users are able to apply for jobs. Users are able to sign up and sign in, search for specific jobs. When a job listing is selected, details of the jobs are listed, and an option to apply for the selected job. If the user isn't logged in, they will be asked to log in. Once logged in, they can successfully apply for the job. 
 
 ## Desktop
-![screenshot1](https://ibb.co/nsJpQGw)
-![screenshot2](https://ibb.co/C6ZTkS0)
+![main](https://user-images.githubusercontent.com/31889642/126214994-dcafd39b-6d87-4601-957c-cd848ed4e27b.png)
+
+![desc](https://user-images.githubusercontent.com/31889642/126215038-1afbe241-6f58-474e-8882-b68a89eff6c7.png)
 
 ## Built With
 
