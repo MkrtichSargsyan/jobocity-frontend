@@ -4,13 +4,14 @@ import { connect } from 'react-redux';
 import '../../custom.css';
 
 import { Backdrop } from './backDrop';
+import api from '../../api'
 
 const applyForTheJob = async (closeModal, openModal, user, job) => {
   const token = localStorage.getItem('token');
   if (token && token !== 'undefined') {
     let config = {
       method: 'post',
-      url: 'http://localhost:3000/apply',
+      url: `${api}/apply`,
       headers: {
         'Content-Type': 'application/json',
       },

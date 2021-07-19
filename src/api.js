@@ -1,2 +1,2 @@
-const api = 'http://localhost:3000/jobs'
+const api = 'https://nameless-hamlet-62856.herokuapp.com'
 export default api
