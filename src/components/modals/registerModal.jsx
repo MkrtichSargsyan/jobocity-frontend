@@ -3,6 +3,8 @@ import axios from 'axios';
 import jwtDecode from 'jwt-decode';
 import { Backdrop } from './backDrop';
 
+import api from '../../api'
+
 class registerModal extends Component {
   state = {
     username: '',
@@ -28,7 +30,7 @@ class registerModal extends Component {
     };
     let config = {
       method: 'post',
-      url: 'http://localhost:3000/users',
+      url: `${api}/users`,
       headers: {
         'Content-Type': 'application/json',
       },

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import jwtDecode from 'jwt-decode';
+import api from '../../api'
 
 import { Backdrop } from './backDrop';
 
@@ -28,7 +29,7 @@ class loginModal extends Component {
     };
     let config = {
       method: 'post',
-      url: 'http://localhost:3000/login',
+      url: `${api}/login`,
       headers: {
         'Content-Type': 'application/json',
       },
