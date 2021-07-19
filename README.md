@@ -1,9 +1,10 @@
 # Jobocity
 
-This project is a platform for showing jobs ,where user can apply to it
+This is a fully responsive web application where users are able to apply for jobs. Users are able to sign up and sign in, search for specific jobs. When a job listing is selected, details of the jobs are listed, and an option to apply for the selected job. If the user isn't logged in, they will be asked to log in. Once logged in, they can successfully apply for the job. 
 
 ## Desktop
-![screenshot]()
+![screenshot1](https://ibb.co/nsJpQGw)
+![screenshot2](https://ibb.co/C6ZTkS0)
 
 ## Built With
 
@@ -12,12 +13,19 @@ This project is a platform for showing jobs ,where user can apply to it
 - JWT
 - CSS
 - Tailwind.css
-
+- Ruby on Rails
+- PostgreSQL
 - VS Code
 
 ## Live Demo
 
-<a href= "https://rawcdn.githack.com/RICKCOYL/embedding-images-and-video2/a77e9d502c03f5f9b1719a0b180b90f8b2b754f7/index.html" target="_blank">Live version</a>
+<a href= "https://zen-hamilton-529609.netlify.app/" target="_blank">Live version</a>
+
+
+## Live Demo for Backend
+
+<a href= "https://nameless-hamlet-62856.herokuapp.com/" target="_blank">Live version</a>
+
 
 ## Author
 
