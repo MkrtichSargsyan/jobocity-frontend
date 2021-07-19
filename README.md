@@ -1,71 +1,45 @@
-# Getting Started with Create React App
+# Jobocity
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a platform for showing jobs ,where user can apply to it
 
-## Available Scripts
+## Desktop
+![screenshot]()
 
-In the project directory, you can run:
+## Built With
 
-### `yarn start`
+- React.js
+- Redux,Redux-thunk
+- JWT
+- CSS
+- Tailwind.css
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- VS Code
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Live Demo
 
-### `yarn test`
+<a href= "https://rawcdn.githack.com/RICKCOYL/embedding-images-and-video2/a77e9d502c03f5f9b1719a0b180b90f8b2b754f7/index.html" target="_blank">Live version</a>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Author
 
-### `yarn build`
+Feel free to reach out. I'm always happy to connect :slightly_smiling_face:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+👤 **Mkrtich Sargsyan**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+[<code><img height="26" src="https://cdn.iconscout.com/icon/free/png-256/github-153-675523.png"></code>](https://github.com/MkrtichSargsyan)
+[<code><img height="26" src="https://upload.wikimedia.org/wikipedia/sco/thumb/9/9f/Twitter_bird_logo_2012.svg/1200px-Twitter_bird_logo_2012.svg.png"></code>](https://twitter.com/MkrtichSargsyan)
+[<code><img height="26" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Linkedin.svg/1200px-Linkedin.svg.png"></code>](https://www.linkedin.com/in/mkrtich-sargsyan/)
+[<code><img height="26" src="https://cdn4.iconfinder.com/data/icons/free-colorful-icons/360/gmail.png"></code>](mailto:mkrtichsargsyan24@gmail.com)
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Show your support
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Give a ⭐️ if you like this project!
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Acknowledgments
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# jobocity-frontend
+- <a href="https://www.w3schools.com/" target="_blank">w3schools.com</a> 
+- <a href="https://www.stackoverflow.com/" target="_blank">Stackoverflow</a>
+- <a href="https://css-tricks.com/" target="_blank">CSS-TRICKS</a>
+- <a href="https://youtube.com/" target="_blank">YouTube player page</a>

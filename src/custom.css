@@ -1,0 +1,90 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  max-width: 1800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.searchbar-img{
+  background-image: url(./images/backgroundImg.png);
+}
+
+/* loader */
+
+.loading{
+  margin: 6rem auto;
+}
+
+.ring {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  padding: 20px;
+  animation: ani 2s linear infinite;
+}
+.loading-text {
+  border-radius: 50%;
+  color: rgb(0, 0, 0);
+  position: absolute;
+  font-size: 2em;
+  background: transparent;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+}
+@keyframes ani {
+  0% {
+    transform: rotate(0deg);
+    box-shadow: 1px 5px 2px #ff002e;
+  }
+  50% {
+    transform: rotate(180deg);
+    box-shadow: 1px 5px 2px #18a401;
+  }
+  100% {
+    transform: rotate(360deg);
+    box-shadow: 1px 5px 2px #033e8e;
+  }
+}
+
+.logo{
+  width: 110px;
+}
+
+/* modal */
+
+.modal {
+  position: fixed;
+  z-index: 1102;
+  background-color: #123456;
+  color: white;
+  width: 30%;
+  padding: 16px;
+  left: 35%;
+  top: 15%;
+  animation-name: modalFade;
+  animation-duration: .9s;
+  border-radius: 10px;
+}
+
+.flash {
+  position: fixed;
+  z-index: 1102;
+  width: 30%;
+  padding: 16px;
+  left: 35%;
+  top: 5%;
+  animation-name: modalFade;
+  animation-duration: .9s;
+  border-radius: 10px;
+}
+
+
+@keyframes modalFade {
+  from {transform: translateY(-50%);opacity: 0;}
+  to {transform: translateY(0);opacity: 1;}
+}
