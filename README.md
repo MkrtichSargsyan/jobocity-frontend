@@ -12,10 +12,11 @@ This is a fully responsive web application where users are able to apply for job
 - React.js
 - Redux,Redux-thunk
 - JWT
+- (bcrypt) to crypt password;
 - CSS
 - Tailwind.css
 - Ruby on Rails
-- PostgreSQL
+- PostgreSQL database
 - VS Code
 
 ## Live Demo
@@ -26,6 +27,30 @@ This is a fully responsive web application where users are able to apply for job
 ## Live Demo for Backend
 
 <a href= "https://nameless-hamlet-62856.herokuapp.com/" target="_blank">Live version</a>
+
+## To get a local copy of the backend please run the following commands on your terminal:
+
+### Setup
+
+1. Open Terminal.
+2. Navigate to your desired location to download the contents of this repository.
+3. Copy and paste the following code into the Terminal: ```git clone git@github.com:MkrtichSargsyan/JoboCity-api.git```
+4. yarn install
+5. bundle install
+6. rails db:create
+7. rails db:migrate
+8. rails db:seed
+9. Enter the command: ```rails s```  to start the server in localhost.
+10. Then you get the application in the localhost in your web browser.
+
+## To get a local copy of the frontend please run the following commands on your terminal:
+
+1. Open Terminal.
+2. Navigate to your desired location to download the contents of this repository.
+3. Copy and paste the following code into the Terminal: ```git clone git@github.com:MkrtichSargsyan/jobocity-frontend.git```
+4. Run "npm install".
+5. Run "npm start".
+6. Open, in your browser, 'localhost:3000'.
 
 
 ## Author
